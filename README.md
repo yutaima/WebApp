@@ -5,7 +5,7 @@ Clone this application source code from: [here](https://bitbucket.org/liuc/capst
 ### What is this repository for? ###
 
 * To contribute in the development of the Wellness Diary project.
-* Version: This is the version 1 for JavaScript/HTML 5 based application.
+* Version: This is the version 1.0 for JavaScript/HTML 5 based application.
 * Legacy: This application is based on Android based [Wellness Diary](https://play.google.com/store/apps/details?id=edu.ohio.heartworks.android&hl=en) application.
 * [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
