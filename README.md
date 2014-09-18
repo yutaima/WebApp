@@ -26,5 +26,8 @@ Clone this application source code from: [here](https://bitbucket.org/liuc/capst
 
 ### Who do I talk to? ###
 
-* Repo owner or admin
-* Other community or team contact
+* Repo owner: [Dr. Chang Liu](https://bitbucket.org/liuc); Email: liuc@ohio.edu
+* Admins:
+* * [Yating Liu](https://bitbucket.org/liuc/capstone.f14.diary3/wiki/Yating%20Liu)
+* * [Yutai Ma](https://bitbucket.org/liuc/capstone.f14.diary3/wiki/Yutai%20Ma%27s%20Page)
+* * [Shomik N Arafat](https://bitbucket.org/liuc/capstone.f14.diary3/wiki/Shomik%20N%20Arafat)
