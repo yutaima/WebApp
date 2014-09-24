@@ -1,0 +1,3 @@
+[submodule "WellnessDiary"]
+	path = ./WellnessDiary
+	url = ./WellnessDiary
