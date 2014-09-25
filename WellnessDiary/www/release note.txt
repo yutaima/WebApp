@@ -1,0 +1,7 @@
+After download WellnessDiary package
+
+1.Unzip file
+2.go to folder named www
+3.Run index.html
+
+release date:09/24/2014
