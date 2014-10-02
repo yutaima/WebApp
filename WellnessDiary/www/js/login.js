@@ -35,6 +35,7 @@ function checkLoginState() {
 window.fbAsyncInit = function() {
     FB.init({
         appId      : '578069782318531',
+        channelUrl: 'http://localhost:63342/WellnessDiary/www/index.html',
         cookie     : true,  // enable cookies to allow the server to access
         // the session
         xfbml      : true,  // parse social plugins on this page
