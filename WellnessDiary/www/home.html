@@ -3,19 +3,35 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
+
 <head>
-  
-  
-  <style>
-	
-    .button{background-color:lightgray}
-	
-	#counting{background-color:black;
-	          color:white;}
-	#meal_list{background-color:white}
-  
-  </style>
-  
+
+
+    <style>
+
+        .button{background-color:lightgray}
+
+        #counting{background-color:black;
+            color:white;}
+        #meal_list{background-color:white}
+        table,td
+        {
+            border:1px solid black;
+        }
+
+    </style>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#settings").click(function(){
+                $("#counting").remove();
+
+
+            });
+
+
+        });
+    </script>
 
 
 </head>
@@ -24,69 +40,48 @@
 <body>
 
 
-  <div class="introduction">
-				
-	<p><img src="img/logo.jpg" width="40" height="35"> <b> Wellness Diary 3</b> </p>	
-	
-  </div>
+<div class="introduction">
 
-  
-  <div >
+    <p><img src="img/logo.jpg" width="40" height="35"> <b> Wellness Diary 3</b> </p>
+
+</div>
+
+
+
+
+<div >
     <div class="button">
-	
-	<input type ="button" style="border:none" style="height:20px" value="+ADD MEAL" onclick="windows.open('http://google.com')">
-	
-	<input type ="button" style="border:none" style="height:20px" value="-DELETE MEAL" onclick="windows.open('http://google.com')">
-	
-	<input type ="button" style="border:none" style="height:20px" value="REVIEW MEAL" onclick="windows.open('http://google.com')">
-	
-	<input type ="button" style="border:none" style="height:20px" value="SETTINGS" onclick="windows.open('http://google.com')">
-	
-   </div>
-   
-   
-   <div id="counting">
-   
-    <p>Recent meals/Total number of meals</p>
-   
-   
-   
-   </div>
-   
-   
-   <div id="meal_list">
-     <p>meal list </p>
-   </div>
+
+        <input type ="button" id="addmeal" style="border:none" style="height:20px" value="+ADD MEAL" onclick="myCreateFunction" >
+
+        <input type ="button" style="border:none" style="height:20px" value="-DELETE MEAL" onclick="DeleteMeals()">
+
+        <input type ="button" style="border:none" style="height:20px" value="REVIEW MEAL" onclick="windows.open('http://google.com')">
+
+        <input type ="button" id="settings" style="border:none" style="height:20px" value="SETTINGS">
+
+    </div>
 
 
-   
-	
-	
-	
-	
-	
-	
-	
-	
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  </div>
+    <div id="counting">
+
+        <p>Recent meals/Total number of meals</p>
+
+
+
+    </div>
+
+
+
+    <table id="myTable">
+        <tr>
+            <td>Author</td>
+            <td>Subject</td>
+            <td>Content</td>
+            <td>Date</td>
+
+        </tr>
+    </table>
 
 
 
@@ -98,8 +93,64 @@
 
 
 
-<script language="javascript">
-document.write("Hello world");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+
+<script>
+
+    $(function(){
+                $.getJSON("http://light.ece.ohio.edu/yichao/api.php?method=get_question_info&jsoncallback=?",
+                        function myCreateFunction(data) {
+                            for (var i = 0; i <= data.length; i++) {
+                                var table = document.getElementById("myTable");
+                                var row = table.insertRow(0);
+                                var cell1 = row.insertCell(0);
+                                var cell2 = row.insertCell(1);
+                                var cell3 = row.insertCell(2);
+                                var cell4 = row.insertCell(3);
+                                cell1.innerHTML = data[i]['author'];
+                                cell2.innerHTML = data[i]['subject'];
+                                cell3.innerHTML = data[i]['content'];
+                                cell4.innerHTML = data[i]['date'];
+
+                            }
+
+                        }
+                )
+            }
+    );
+
+    function DeleteMeals()
+    {
+        document.getElementById("myTable").deleteRow(0);
+    }
 </script>
 </body>
 </html>

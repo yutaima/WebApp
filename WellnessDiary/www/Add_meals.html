@@ -15,7 +15,13 @@
 	#meal_list{background-color:white}
   
   </style>
-  
+   
+   
+   <script language="javascript">
+   
+   
+   
+   </script>
 
 
 </head>
@@ -40,72 +46,52 @@
 	
 	<input type ="button" style="border:none" style="height:20px" value="CANCEL" onclick="windows.open('http://google.com')">
 	
-	<input type ="button" style="border:none" style="height:20px" value="SAVE" onclick="windows.open('http://google.com')">
+	<input type ="button" style="border:none" style="height:20px" value="SAVE" onclick="storeLocalContent()">
 	
 
 	
    </div>
+   
+   
    
    
    <div id="MEAL_OPTIONS">
-    
 
-    	
-     
-   
-    
-   
-   
+       Type of snack:
+	   
+	   <select>
+       <option value="Breakfast">Breakfast</option>
+       <option value="Lunch">Lunch</option>
+       <option value="Dinner">Dinner</option>
+       <option value="Snack">Snack</option>
+       <option value="Drink">Drink</option>
+  
+      </select>
+	   
+	   Time:<input type="text" name="Time"><br/>
+	   <input type="file" accept="image/*;capture=camera">
+	   
+	</form>
+	
+	<button id="cmdCamera" data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmdCamera', label:'PlayerPhoto', 
+	                    icon:'camera', section:'global', tooltip:'Change Player Phota'}">
+						
+						
+	</button>
+	   
+   <span id="result"></span>
    
    </div>
-   
-   
-   <div id="meal_list">
-     <p>meal list </p>
-   </div>
-
-
-   
-	
-	
-	
-	
-	
-	
-	
-	
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
   </div>
+  
+  
+  <script src="script/jquery-1.8.1.min.js"> type="text/javascript"></script>
+  <script src="script/my_sjs"> type="text/javascript"></script>
+  
+  
+  
+  
 
-
-
-
-
-
-
-
-
-
-
-<script language="javascript">
-document.write("Hello world");
-</script>
 </body>
 </html>
