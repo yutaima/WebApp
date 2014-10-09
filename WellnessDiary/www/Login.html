@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Facebook Login JavaScript Example</title>
+    <meta charset="UTF-8">
+</head>
+<style>
+    body {
+        background: url('img/flower.jpg');
+        background-size: 320px 533px;
+        background-repeat: no-repeat;
+    }
+</style>
+<body>
+
+
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
+
+<div id="status">
+</div>
+<script type="text/javascript" src="js/login.js"></script>
+<!--
+  Below we include the Login Button social plugin. This button uses
+  the JavaScript SDK to present a graphical Login button that triggers
+  the FB.login() function when clicked.
+-->
+
+</body>
+</html>
