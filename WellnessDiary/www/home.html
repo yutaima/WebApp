@@ -6,7 +6,10 @@
 
 <head>
 
-
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/text.css"/>
+    <link rel="stylesheet" href="css/default.css"/>
     <style>
 
         .button{background-color:lightgray}
@@ -21,18 +24,6 @@
 
     </style>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $("#settings").click(function(){
-                $("#counting").remove();
-
-
-            });
-
-
-        });
-    </script>
-
 
 </head>
 
@@ -49,16 +40,17 @@
 
 
 
-<div >
-    <div class="button">
+<div id="lists">
+    <div class="head">
 
-        <input type ="button" id="addmeal" style="border:none" style="height:20px" value="+ADD MEAL" onclick="myCreateFunction" >
+        <div id="taskTools">
+            <span id="addTask" class="button">Add Meal</span>
+            <span id="addTask" class="button">Delete Meal</span>
+            <span id="addTask" class="button">Save Meal</span>
+            <span id="addTask" class="button">Settings</span>
 
-        <input type ="button" style="border:none" style="height:20px" value="-DELETE MEAL" onclick="DeleteMeals()">
 
-        <input type ="button" style="border:none" style="height:20px" value="REVIEW MEAL" onclick="windows.open('http://google.com')">
-
-        <input type ="button" id="settings" style="border:none" style="height:20px" value="SETTINGS">
+        </div>
 
     </div>
 
@@ -71,86 +63,28 @@
 
     </div>
 
+    <div class="body">
 
 
-    <table id="myTable">
-        <tr>
-            <td>Author</td>
-            <td>Subject</td>
-            <td>Content</td>
-            <td>Date</td>
-
-        </tr>
-    </table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </div>
 
 
 
 </div>
 
 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script src="js/tabs.js"> </script>
+<script src="js/adddelete.js"> </script>
+<script type="text/javascript" charset="utf-8">
 
 
+    LOCALTODO("#lists .head ul", "#lists .body")
+    TABS("#lists");
 
 
-
-
-
-<script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
-
-<script>
-
-    $(function(){
-                $.getJSON("http://light.ece.ohio.edu/yichao/api.php?method=get_question_info&jsoncallback=?",
-                        function myCreateFunction(data) {
-                            for (var i = 0; i <= data.length; i++) {
-                                var table = document.getElementById("myTable");
-                                var row = table.insertRow(0);
-                                var cell1 = row.insertCell(0);
-                                var cell2 = row.insertCell(1);
-                                var cell3 = row.insertCell(2);
-                                var cell4 = row.insertCell(3);
-                                cell1.innerHTML = data[i]['author'];
-                                cell2.innerHTML = data[i]['subject'];
-                                cell3.innerHTML = data[i]['content'];
-                                cell4.innerHTML = data[i]['date'];
-
-                            }
-
-                        }
-                )
-            }
-    );
-
-    function DeleteMeals()
-    {
-        document.getElementById("myTable").deleteRow(0);
-    }
 </script>
+
 </body>
+
 </html>

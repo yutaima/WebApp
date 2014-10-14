@@ -1,0 +1,24 @@
+html , body, div , span
+h1, h2, h3, h4, h5, h6, p,
+a, em, img, small, strong,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legent {
+        margin:0;
+		padding:0;
+		border:0;
+		outline:0;
+		font-weight:inherit;
+		font-style:inherit;
+		font-size:100%;
+		font-family:inherit;
+		vertical-align:baseline;
+		
+
+}
+:focus {
+         outline:0;
+		 
+ }
+ ol, ul {
+         list-style:none;
+ }

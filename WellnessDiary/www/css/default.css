@@ -1,0 +1,117 @@
+#lists{
+   
+   padding:100px;
+
+
+}
+
+#lists .head ul li{
+    display:inline-block;
+	margin-right:5px;
+  
+}
+
+#lists .head ul li a {
+
+    background:#c1cbcc;
+    background:-webkit-gradient(linear, left top, left bottom, from(rgba(225,225,225,0.5)), to(rgba(225,225,225,0))) #aaa;
+    -webkit-border-top-left-radius:5px;
+	-webkit-border-top-right-radius:5px;
+	display:inline-block;
+	padding:5px 15px;
+	color:#000;
+	text-decoration:none;
+}
+
+#lists .head ul li a.current{
+    cursor:default;
+	background:#797979;
+	background:-webkit-gradient(linear, left top, left bottom, from(#aaa), to(#797979));
+	
+
+}
+
+#lists .head ul li a:not(.current):hover{
+
+    background:#ddfdff;
+	background:-webkit-gradient(linear, left top, left bottom, from(rgba(225,225,225,0)), to(rgba(225,225,225,0.95))) #aaa;
+    
+}
+
+#lists #taskTools{
+    background:#797979;
+}
+
+#lists #taskTools span{
+    display:inline-block;
+	margin:10px;
+
+
+}
+.button{
+    padding:5px 10px;
+	cursor:pointer;
+	border-radius:3px;
+	-webkit=border-radius:3px;
+    background:-webkit-gradient(linear, left top, left bottom, from(rgba(225,225,225,0.75)), to(rgba(225,225,225,0))) #aaa;
+	border:1px solide #aaa;
+	
+}
+
+.button:hover {
+    background:-webkit-gradient(linear, left top, left bottom, from(rgba(225,225,225,0.95)), to(rgba(225,225,225,0.25))) #aaa;
+    border:1ps solid #f3f3f3;
+	
+}
+
+#lists .body {
+    background:#ccc;
+	
+
+}
+
+#lists .body div{
+    display:none;
+	
+
+}
+
+#lists .body div.current {
+    display:block;
+
+}
+
+
+#lists body li{
+    padding:5px 15px;
+	background:#ccc;
+	
+
+
+}
+
+
+#lists .body li:nth-child(2n){
+
+    background:#fff;
+	
+
+}
+#lists .body li .select{
+    
+	display:inline-block;
+	width:10px;
+	height:10px;
+	background:#ececec;
+	border:1px solid #494949;
+	vertical-align:middle;
+	margin:0 15px 0 0;
+	cursor:pointer;
+
+}
+
+
+#lists .body li .select.selected{
+    background: #474747;
+
+}
